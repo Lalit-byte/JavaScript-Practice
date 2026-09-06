@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(51, 49, 49);
+    }
+</style>
+
+<body>
+
+</body>
+
+
+<script>
+
+    const createDiv = (text,color) => {
+        const div = document.createElement("div")
+
+        // console.log(div)
+
+        div.className = "main"
+        div.id = Math.round(Math.random() * 10 + 1)
+
+        div.setAttribute("title", "generated Title")
+
+        div.style.backgroundColor = color;
+
+        //div.innerText = "Hello I am Lalit..."
+
+        const addText = document.createTextNode(text)  //this is optimized approach
+        div.appendChild(addText)
+
+        document.body.appendChild(div)
+
+    }
+
+    createDiv("This is first div", "Blue")
+    createDiv("This is second Div", "Orange")
+
+</script>
+
+</html>
