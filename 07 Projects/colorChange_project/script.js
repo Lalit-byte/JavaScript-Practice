@@ -8,4 +8,4 @@ buttons.forEach((button)=>{
     console.log(e.target)
     body.style.backgroundColor = button.id;
   })
-})
+})  
