@@ -15,5 +15,17 @@ form.addEventListener("submit",(e)=>{
   else{
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
     results.innerHTML = `<span>${bmi}</span>`
+    const category = document.querySelector("#category")
+    if(bmi<18.6){
+      category.innerHTML = `<span>Under Weight</span>`
+    }
+    else if(bmi<24.9){
+      category.innerHTML = `<span>Normal Weight</span>`
+    }
+    else{
+      category.innerHTML = `<span>Over Weight </span>`
+    }
   }
+
+
 })
